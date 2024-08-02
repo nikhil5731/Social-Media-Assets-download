@@ -20,7 +20,6 @@ function App() {
 
     try {
       const response = await axios.post("http://localhost:8000/download/", { url });
-      console.log(response.data)
       setMessage(response.data.message);
       setFileName(response.data.file_name);
     } catch (error) {
